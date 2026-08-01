@@ -1,0 +1,11 @@
+video_id,portrait,preset_id,motion,scale_max,x_fraction,y_fraction,rotation_deg,grain_opacity,render_scale,duration_sec,fps,status
+HV-000039,libya.130.jpg,VP-022,breathing,1.0325,0,0,0,0.04,2,7,24,generated
+HV-000040,libya.130.jpg,VP-023,scale_in_out,1.036,0,0,0,0.04,2,7,24,generated
+HV-000041,libya.130.jpg,VP-024,scale_out_in,1.036,0,0,0,0.04,2,7,24,generated
+HV-000042,libya.130.jpg,VP-025,drift_x,1.045,0.0045,0,0,0.04,2,7,24,generated
+HV-000043,libya.130.jpg,VP-026,drift_x_reverse,1.045,0.0045,0,0,0.04,2,7,24,generated
+HV-000044,libya.130.jpg,VP-027,drift_y,1.045,0,0.0045,0,0.04,2,7,24,generated
+HV-000045,libya.130.jpg,VP-028,drift_y_reverse,1.045,0,0.0045,0,0.04,2,7,24,generated
+HV-000046,libya.130.jpg,VP-029,scale_drift,1.040,0.0035,0.0025,0,0.04,2,7,24,generated
+HV-000047,libya.130.jpg,VP-030,orbit,1.040,0.003,0.00225,0,0.04,2,7,24,generated
+HV-000048,libya.130.jpg,VP-031,tilt,1.080,0,0,0.175,0.04,2,7,24,generated
