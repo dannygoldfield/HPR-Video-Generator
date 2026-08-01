@@ -2,7 +2,7 @@ from pathlib import Path
 import unittest
 
 from hpr_video_generator.config import load_config
-from hpr_video_generator.generator import build_filter, motion_state
+from hpr_video_generator.generator import build_filter, build_texture_filter, motion_state
 
 
 class GeneratorTests(unittest.TestCase):
@@ -33,6 +33,14 @@ class GeneratorTests(unittest.TestCase):
     def test_restrained_presets_use_half_strength_grain(self):
         result = build_filter(self.config, self.config.presets["VP-012"], 168)
         self.assertIn("all_opacity=0.04", result)
+
+    def test_texture_filter_removes_static_scene_and_loops(self):
+        result = build_texture_filter(self.config, self.config.presets["VP-012"], 0.02)
+        self.assertIn("reverse[texture_reverse]", result)
+        self.assertIn("tblend=all_mode=difference", result)
+        self.assertIn("lut=y='val*0.02'[mask]", result)
+        self.assertIn("extractplanes=y+u+v", result)
+        self.assertIn("[lit_y][base_u][base_v]mergeplanes", result)
 
 
 if __name__ == "__main__":

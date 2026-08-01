@@ -1,0 +1,5 @@
+video_id,portrait_id,texture_id,source_clip,opacity,speed,rotation_deg,portrait_motion,status
+HV-000021,PO-001,VT-001,IMG_0737.mov,0.02,1.0,0,still,generated
+HV-000022,PO-001,VT-001,IMG_0737.mov,0.04,1.0,0,still,generated
+HV-000023,PO-001,VT-002,IMG_0736.mov,0.02,1.0,0,still,generated
+HV-000024,PO-001,VT-002,IMG_0736.mov,0.04,1.0,0,still,generated

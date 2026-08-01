@@ -5,7 +5,9 @@ __pycache__/
 *.egg-info/
 media/source/portraits/*
 media/source/grain/*
+media/source/textures/*
 media/output/candidates/*
 !media/source/portraits/.gitkeep
 !media/source/grain/.gitkeep
+!media/source/textures/.gitkeep
 !media/output/candidates/.gitkeep

@@ -106,3 +106,68 @@ def generate(config: Config, candidate: Candidate) -> Path:
                 "output": str(candidate.output), "generatorVersion": config.version}
     candidate.output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
     return candidate.output
+
+
+def build_texture_filter(config: Config, preset: Preset, texture_opacity: float, rotation_deg: float = 0.0) -> str:
+    half_frames = config.duration_sec * config.fps // 2
+    angle = math.radians(rotation_deg)
+    portrait = (
+        f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
+        f"scale={config.width}:{config.height}[portrait]"
+    )
+    grain = (
+        f"[1:v]scale={config.width}:{config.height}:force_original_aspect_ratio=increase,"
+        f"crop={config.width}:{config.height},fps={config.fps}[grain]"
+    )
+    texture = (
+        f"[2:v]fps={config.fps},trim=end_frame={half_frames},setpts=PTS-STARTPTS,"
+        f"rotate={angle}:ow=rotw({angle}):oh=roth({angle}),"
+        f"scale={config.width}:{config.height}:force_original_aspect_ratio=increase,"
+        f"crop={config.width}:{config.height},format=gray,split[texture_forward][texture_reverse_source];"
+        f"[texture_reverse_source]reverse[texture_reverse];"
+        f"[texture_forward][texture_reverse]concat=n=2:v=1:a=0,"
+        f"tblend=all_mode=difference,gblur=sigma=1,eq=contrast=2.0:brightness=-0.04,format=gray[texture]"
+    )
+    layers = (
+        f"[portrait][grain]blend=all_mode=overlay:all_opacity={preset.grain_opacity},format=yuv420p,"
+        f"extractplanes=y+u+v[base_y][base_u][base_v];"
+        f"color=c=white:s={config.width}x{config.height}:r={config.fps}:d={config.duration_sec},format=gray[light];"
+        f"[texture]lut=y='val*{texture_opacity}'[mask];"
+        f"[base_y][light][mask]maskedmerge[lit_y];"
+        f"[lit_y][base_u][base_v]mergeplanes=0x001020:{config.pixel_format}[out]"
+    )
+    return ";".join([portrait, grain, texture, layers])
+
+
+def generate_texture_test(
+    config: Config,
+    candidate: Candidate,
+    texture: Path,
+    texture_opacity: float,
+    texture_speed: float = 1.0,
+    texture_rotation_deg: float = 0.0,
+) -> Path:
+    for source in (candidate.portrait, candidate.grain, texture):
+        if not source.is_file():
+            raise FileNotFoundError(source)
+    if texture_speed != 1.0:
+        raise ValueError("The controlled first test uses texture_speed=1.0")
+    candidate.output.parent.mkdir(parents=True, exist_ok=True)
+    frames = candidate.duration_sec * config.fps
+    command = [
+        find_ffmpeg(), "-y", "-loop", "1", "-i", str(candidate.portrait),
+        "-stream_loop", "-1", "-i", str(candidate.grain), "-i", str(texture),
+        "-filter_complex", build_texture_filter(config, candidate.preset, texture_opacity, texture_rotation_deg),
+        "-map", "[out]", "-frames:v", str(frames), "-an", "-c:v", config.codec,
+        "-crf", "18", "-preset", "medium", "-movflags", "+faststart", str(candidate.output),
+    ]
+    subprocess.run(command, check=True)
+    metadata = {
+        "portrait": str(candidate.portrait), "grain": str(candidate.grain), "preset": candidate.preset.id,
+        "seed": candidate.seed, "durationSec": candidate.duration_sec, "texture": str(texture),
+        "textureOpacity": texture_opacity, "textureSpeed": texture_speed,
+        "textureRotationDeg": texture_rotation_deg, "loopMethod": "forward-reverse",
+        "output": str(candidate.output), "generatorVersion": config.version,
+    }
+    candidate.output.with_suffix(".json").write_text(json.dumps(metadata, indent=2) + "\n")
+    return candidate.output
