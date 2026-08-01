@@ -12,6 +12,7 @@ class Preset:
     x: float
     y: float
     rotation_deg: float
+    grain_opacity: float
     loop_safe: bool
 
 
@@ -39,7 +40,8 @@ def load_config(path: Path) -> Config:
         preset = Preset(
             id=node.attrib["id"], name=node.attrib["name"], motion=node.attrib["motion"],
             scale=float(node.attrib["scale"]), x=float(node.attrib["x"]), y=float(node.attrib["y"]),
-            rotation_deg=float(node.attrib["rotationDeg"]), loop_safe=node.attrib["loopSafe"] == "true",
+            rotation_deg=float(node.attrib["rotationDeg"]), grain_opacity=float(node.attrib["grainOpacity"]),
+            loop_safe=node.attrib["loopSafe"] == "true",
         )
         presets[preset.id] = preset
     return Config(
@@ -47,4 +49,3 @@ def load_config(path: Path) -> Config:
         fps=int(output.attrib["fps"]), codec=output.attrib["codec"], pixel_format=output.attrib["pixelFormat"],
         duration_sec=int(defaults.attrib["durationSec"]), grain_opacity=float(defaults.attrib["grainOpacity"]), presets=presets,
     )
-

@@ -26,8 +26,13 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("all_opacity=0.08", result)
 
     def test_tilt_uses_rotate_filter_frame_variable(self):
-        result = build_filter(self.config, self.config.presets["VP-011"], 168)
+        result = build_filter(self.config, self.config.presets["VP-021"], 168)
         self.assertIn("sin(2*PI*n/167)", result)
+        self.assertIn("scale=1120:1992,crop=1080:1920", result)
+
+    def test_restrained_presets_use_half_strength_grain(self):
+        result = build_filter(self.config, self.config.presets["VP-012"], 168)
+        self.assertIn("all_opacity=0.04", result)
 
 
 if __name__ == "__main__":

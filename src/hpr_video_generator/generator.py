@@ -84,10 +84,10 @@ def build_filter(config: Config, preset: Preset, frames: int) -> str:
     if preset.motion == "tilt":
         rotate_phase = f"2*PI*n/{n}"
         angle = f"{math.radians(preset.rotation_deg)}*sin({rotate_phase})"
-        portrait += f",rotate='{angle}':ow=iw:oh=ih:c=black"
+        portrait += f",rotate='{angle}':ow=iw:oh=ih:c=black,scale=1120:1992,crop={config.width}:{config.height}"
     portrait += "[portrait]"
     grain = f"[1:v]scale={config.width}:{config.height}:force_original_aspect_ratio=increase,crop={config.width}:{config.height},fps={config.fps}[grain]"
-    blend = f"[portrait][grain]blend=all_mode=overlay:all_opacity={config.grain_opacity},format={config.pixel_format}[out]"
+    blend = f"[portrait][grain]blend=all_mode=overlay:all_opacity={preset.grain_opacity},format={config.pixel_format}[out]"
     return ";".join([portrait, grain, blend])
 
 

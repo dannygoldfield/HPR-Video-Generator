@@ -3,17 +3,26 @@
   <output width="1080" height="1920" fps="24" codec="libx264" pixelFormat="yuv420p"/>
   <defaults durationSec="7" grainOpacity="0.08"/>
   <presets>
-    <preset id="VP-001" name="Still" status="active" motion="still" scale="1.025" x="0" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-002" name="Breathing" status="active" motion="breathing" scale="1.040" x="0" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-003" name="Scale In-Out" status="active" motion="scale_in_out" scale="1.055" x="0" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-004" name="Scale Out-In" status="active" motion="scale_out_in" scale="1.055" x="0" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-005" name="Drift Left-Right" status="active" motion="drift_x" scale="1.055" x="0.018" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-006" name="Drift Right-Left" status="active" motion="drift_x_reverse" scale="1.055" x="0.018" y="0" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-007" name="Drift Up-Down" status="active" motion="drift_y" scale="1.055" x="0" y="0.018" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-008" name="Drift Down-Up" status="active" motion="drift_y_reverse" scale="1.055" x="0" y="0.018" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-009" name="Scale + Drift" status="experimental" motion="scale_drift" scale="1.065" x="0.014" y="0.010" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-010" name="Micro Orbit" status="experimental" motion="orbit" scale="1.065" x="0.012" y="0.009" rotationDeg="0" loopSafe="true"/>
-    <preset id="VP-011" name="Micro Tilt" status="experimental" motion="tilt" scale="1.070" x="0" y="0" rotationDeg="0.35" loopSafe="true"/>
+    <preset id="VP-001" name="Still" status="active" motion="still" scale="1.025" x="0" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-002" name="Breathing" status="retired" motion="breathing" scale="1.040" x="0" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-003" name="Scale In-Out" status="retired" motion="scale_in_out" scale="1.055" x="0" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-004" name="Scale Out-In" status="retired" motion="scale_out_in" scale="1.055" x="0" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-005" name="Drift Left-Right" status="retired" motion="drift_x" scale="1.055" x="0.018" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-006" name="Drift Right-Left" status="retired" motion="drift_x_reverse" scale="1.055" x="0.018" y="0" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-007" name="Drift Up-Down" status="retired" motion="drift_y" scale="1.055" x="0" y="0.018" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-008" name="Drift Down-Up" status="retired" motion="drift_y_reverse" scale="1.055" x="0" y="0.018" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-009" name="Scale + Drift" status="retired" motion="scale_drift" scale="1.065" x="0.014" y="0.010" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-010" name="Micro Orbit" status="retired" motion="orbit" scale="1.065" x="0.012" y="0.009" rotationDeg="0" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-011" name="Micro Tilt" status="retired" motion="tilt" scale="1.070" x="0" y="0" rotationDeg="0.35" grainOpacity="0.08" loopSafe="true"/>
+    <preset id="VP-012" name="Breathing / Restrained" status="active" motion="breathing" scale="1.0325" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-013" name="Scale In-Out / Restrained" status="experimental" motion="scale_in_out" scale="1.040" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-014" name="Scale Out-In / Restrained" status="experimental" motion="scale_out_in" scale="1.040" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-015" name="Drift Left-Right / Restrained" status="experimental" motion="drift_x" scale="1.055" x="0.009" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-016" name="Drift Right-Left / Restrained" status="experimental" motion="drift_x_reverse" scale="1.055" x="0.009" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-017" name="Drift Up-Down / Restrained" status="experimental" motion="drift_y" scale="1.055" x="0" y="0.009" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-018" name="Drift Down-Up / Restrained" status="experimental" motion="drift_y_reverse" scale="1.055" x="0" y="0.009" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-019" name="Scale + Drift / Restrained" status="experimental" motion="scale_drift" scale="1.045" x="0.007" y="0.005" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-020" name="Micro Orbit / Restrained" status="experimental" motion="orbit" scale="1.045" x="0.006" y="0.0045" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-021" name="Micro Tilt / Restrained + Safety Crop" status="experimental" motion="tilt" scale="1.080" x="0" y="0" rotationDeg="0.175" grainOpacity="0.04" loopSafe="true"/>
   </presets>
 </videoGenerator>
-
