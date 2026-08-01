@@ -1,0 +1,11 @@
+video_id,preset_id,motion,scale_max,x_fraction,y_fraction,rotation_deg,grain_opacity,render_scale,duration_sec,fps,status
+HV-000029,VP-022,breathing,1.0325,0,0,0,0.04,2,7,24,generated
+HV-000030,VP-023,scale_in_out,1.036,0,0,0,0.04,2,7,24,generated
+HV-000031,VP-024,scale_out_in,1.036,0,0,0,0.04,2,7,24,generated
+HV-000032,VP-025,drift_x,1.045,0.0045,0,0,0.04,2,7,24,generated
+HV-000033,VP-026,drift_x_reverse,1.045,0.0045,0,0,0.04,2,7,24,generated
+HV-000034,VP-027,drift_y,1.045,0,0.0045,0,0.04,2,7,24,generated
+HV-000035,VP-028,drift_y_reverse,1.045,0,0.0045,0,0.04,2,7,24,generated
+HV-000036,VP-029,scale_drift,1.040,0.0035,0.0025,0,0.04,2,7,24,generated
+HV-000037,VP-030,orbit,1.040,0.003,0.00225,0,0.04,2,7,24,generated
+HV-000038,VP-031,tilt,1.080,0,0,0.175,0.04,2,7,24,generated

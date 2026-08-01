@@ -24,5 +24,15 @@
     <preset id="VP-019" name="Scale + Drift / Restrained" status="experimental" motion="scale_drift" scale="1.045" x="0.007" y="0.005" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
     <preset id="VP-020" name="Micro Orbit / Restrained" status="experimental" motion="orbit" scale="1.045" x="0.006" y="0.0045" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
     <preset id="VP-021" name="Micro Tilt / Restrained + Safety Crop" status="experimental" motion="tilt" scale="1.080" x="0" y="0" rotationDeg="0.175" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-022" name="Breathing / Subpixel" status="experimental" motion="breathing" scale="1.0325" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-023" name="Scale In-Out / Subpixel" status="experimental" motion="scale_in_out" scale="1.036" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-024" name="Scale Out-In / Subpixel" status="experimental" motion="scale_out_in" scale="1.036" x="0" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-025" name="Drift Left-Right / Subpixel" status="experimental" motion="drift_x" scale="1.045" x="0.0045" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-026" name="Drift Right-Left / Subpixel" status="experimental" motion="drift_x_reverse" scale="1.045" x="0.0045" y="0" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-027" name="Drift Up-Down / Subpixel" status="experimental" motion="drift_y" scale="1.045" x="0" y="0.0045" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-028" name="Drift Down-Up / Subpixel" status="experimental" motion="drift_y_reverse" scale="1.045" x="0" y="0.0045" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-029" name="Scale + Drift / Subpixel" status="experimental" motion="scale_drift" scale="1.040" x="0.0035" y="0.0025" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-030" name="Micro Orbit / Subpixel" status="experimental" motion="orbit" scale="1.040" x="0.003" y="0.00225" rotationDeg="0" grainOpacity="0.04" loopSafe="true"/>
+    <preset id="VP-031" name="Micro Tilt / Subpixel" status="experimental" motion="tilt" scale="1.080" x="0" y="0" rotationDeg="0.175" grainOpacity="0.04" loopSafe="true"/>
   </presets>
 </videoGenerator>

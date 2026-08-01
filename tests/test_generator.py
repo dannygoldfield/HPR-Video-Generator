@@ -24,11 +24,13 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("d=168", result)
         self.assertIn("all_mode=overlay", result)
         self.assertIn("all_opacity=0.08", result)
+        self.assertIn("s=2160x3840", result)
+        self.assertIn("scale=1080:1920:flags=lanczos", result)
 
     def test_tilt_uses_rotate_filter_frame_variable(self):
         result = build_filter(self.config, self.config.presets["VP-021"], 168)
         self.assertIn("sin(2*PI*n/167)", result)
-        self.assertIn("scale=1120:1992,crop=1080:1920", result)
+        self.assertIn("scale=2240:3984,crop=2160:3840", result)
 
     def test_restrained_presets_use_half_strength_grain(self):
         result = build_filter(self.config, self.config.presets["VP-012"], 168)

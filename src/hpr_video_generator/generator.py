@@ -57,6 +57,8 @@ def find_ffmpeg() -> str:
 
 
 def build_filter(config: Config, preset: Preset, frames: int) -> str:
+    render_width = config.width * 2
+    render_height = config.height * 2
     n = max(frames - 1, 1)
     phase = f"2*PI*on/{n}"
     wave = f"(1-cos({phase}))/2"
@@ -79,12 +81,13 @@ def build_filter(config: Config, preset: Preset, frames: int) -> str:
         y += f"+{preset.y}*ih*(1-cos({phase}))"
     portrait = (
         f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
-        f"zoompan=z='{zoom}':x='{x}':y='{y}':d={frames}:s={config.width}x{config.height}:fps={config.fps}"
+        f"zoompan=z='{zoom}':x='{x}':y='{y}':d={frames}:s={render_width}x{render_height}:fps={config.fps}"
     )
     if preset.motion == "tilt":
         rotate_phase = f"2*PI*n/{n}"
         angle = f"{math.radians(preset.rotation_deg)}*sin({rotate_phase})"
-        portrait += f",rotate='{angle}':ow=iw:oh=ih:c=black,scale=1120:1992,crop={config.width}:{config.height}"
+        portrait += f",rotate='{angle}':ow=iw:oh=ih:c=black,scale=2240:3984,crop={render_width}:{render_height}"
+    portrait += f",scale={config.width}:{config.height}:flags=lanczos"
     portrait += "[portrait]"
     grain = f"[1:v]scale={config.width}:{config.height}:force_original_aspect_ratio=increase,crop={config.width}:{config.height},fps={config.fps}[grain]"
     blend = f"[portrait][grain]blend=all_mode=overlay:all_opacity={preset.grain_opacity},format={config.pixel_format}[out]"
