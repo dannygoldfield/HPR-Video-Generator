@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="videoGenerator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="output"><xs:complexType><xs:attribute name="width" type="xs:positiveInteger" use="required"/><xs:attribute name="height" type="xs:positiveInteger" use="required"/><xs:attribute name="fps" type="xs:positiveInteger" use="required"/><xs:attribute name="codec" type="xs:string" use="required"/><xs:attribute name="pixelFormat" type="xs:string" use="required"/></xs:complexType></xs:element>
+        <xs:element name="defaults"><xs:complexType><xs:attribute name="durationSec" type="xs:positiveInteger" use="required"/><xs:attribute name="grainOpacity" type="xs:decimal" use="required"/></xs:complexType></xs:element>
+        <xs:element name="presets"><xs:complexType><xs:sequence><xs:element name="preset" maxOccurs="unbounded"><xs:complexType><xs:attribute name="id" type="xs:ID" use="required"/><xs:attribute name="name" type="xs:string" use="required"/><xs:attribute name="status" type="xs:string" use="required"/><xs:attribute name="motion" type="xs:string" use="required"/><xs:attribute name="scale" type="xs:decimal" use="required"/><xs:attribute name="x" type="xs:decimal" use="required"/><xs:attribute name="y" type="xs:decimal" use="required"/><xs:attribute name="rotationDeg" type="xs:decimal" use="required"/><xs:attribute name="loopSafe" type="xs:boolean" use="required"/></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

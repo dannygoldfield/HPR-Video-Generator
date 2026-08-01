@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videoGenerator version="0.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="generator.xsd">
+  <output width="1080" height="1920" fps="24" codec="libx264" pixelFormat="yuv420p"/>
+  <defaults durationSec="7" grainOpacity="0.08"/>
+  <presets>
+    <preset id="VP-001" name="Still" status="active" motion="still" scale="1.025" x="0" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-002" name="Breathing" status="active" motion="breathing" scale="1.040" x="0" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-003" name="Scale In-Out" status="active" motion="scale_in_out" scale="1.055" x="0" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-004" name="Scale Out-In" status="active" motion="scale_out_in" scale="1.055" x="0" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-005" name="Drift Left-Right" status="active" motion="drift_x" scale="1.055" x="0.018" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-006" name="Drift Right-Left" status="active" motion="drift_x_reverse" scale="1.055" x="0.018" y="0" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-007" name="Drift Up-Down" status="active" motion="drift_y" scale="1.055" x="0" y="0.018" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-008" name="Drift Down-Up" status="active" motion="drift_y_reverse" scale="1.055" x="0" y="0.018" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-009" name="Scale + Drift" status="experimental" motion="scale_drift" scale="1.065" x="0.014" y="0.010" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-010" name="Micro Orbit" status="experimental" motion="orbit" scale="1.065" x="0.012" y="0.009" rotationDeg="0" loopSafe="true"/>
+    <preset id="VP-011" name="Micro Tilt" status="experimental" motion="tilt" scale="1.070" x="0" y="0" rotationDeg="0.35" loopSafe="true"/>
+  </presets>
+</videoGenerator>
+

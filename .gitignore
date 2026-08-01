@@ -1,0 +1,11 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+media/source/portraits/*
+media/source/grain/*
+media/output/candidates/*
+!media/source/portraits/.gitkeep
+!media/source/grain/.gitkeep
+!media/output/candidates/.gitkeep
