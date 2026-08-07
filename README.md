@@ -1,5 +1,7 @@
 # HPR Video Generator
 
+> **Archived project.** Active How People Relate production development now lives in [`HPR-Umbrella`](https://github.com/dannygoldfield/HPR-Umbrella). This repository is preserved as the standalone development history of the video generator. Its code and history were incorporated into HPR-Umbrella.
+
 An image-first, audio-independent system for generating silent, loop-safe vertical videos from portraits.
 
 The generator deliberately knows nothing about audio, pairing, publishing, or analytics. Its output becomes an eligible video pool for the future HPR Generator.
@@ -25,4 +27,3 @@ python -m hpr_video_generator.cli generate --portrait media/source/portraits/bhu
 ```
 
 Generation requires FFmpeg. The program accepts a system FFmpeg or the executable supplied by the optional `imageio-ffmpeg` package.
-
