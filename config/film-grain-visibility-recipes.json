@@ -1,0 +1,83 @@
+{
+  "version": "0.3.0",
+  "experimentId": "film-grain-visibility-v22",
+  "purpose": "Find the minimum scanned-film grain scale and signal strength that remains consciously visible after H.264 delivery and mobile-size display, while preserving the locked 10000 Development Animation and fixed camera.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — locked Development Animation and fixed camera"
+    }
+  ],
+  "plates": {
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    }
+  },
+  "recipes": [
+    {
+      "id": "FGV-001",
+      "name": "No-grain composite control",
+      "plate": null,
+      "opacity": 0.0,
+      "signalGain": 1.0,
+      "textureScale": 1.0
+    },
+    {
+      "id": "FGV-002",
+      "name": "Native grain — 50%",
+      "plate": "super35-light",
+      "opacity": 0.5,
+      "signalGain": 1.0,
+      "textureScale": 1.0
+    },
+    {
+      "id": "FGV-003",
+      "name": "Native grain — 100%",
+      "plate": "super35-light",
+      "opacity": 1.0,
+      "signalGain": 1.0,
+      "textureScale": 1.0
+    },
+    {
+      "id": "FGV-004",
+      "name": "1.5× grain — 65%",
+      "plate": "super35-light",
+      "opacity": 0.65,
+      "signalGain": 1.5,
+      "textureScale": 1.5
+    },
+    {
+      "id": "FGV-005",
+      "name": "2× grain — 65%",
+      "plate": "super35-light",
+      "opacity": 0.65,
+      "signalGain": 2.0,
+      "textureScale": 2.0
+    },
+    {
+      "id": "FGV-006",
+      "name": "2× grain — strong",
+      "plate": "super35-light",
+      "opacity": 0.85,
+      "signalGain": 3.0,
+      "textureScale": 2.0
+    },
+    {
+      "id": "FGV-007",
+      "name": "2.5× grain — excessive boundary",
+      "plate": "super35-light",
+      "opacity": 1.0,
+      "signalGain": 4.0,
+      "textureScale": 2.5
+    }
+  ]
+}

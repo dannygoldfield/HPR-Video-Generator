@@ -9,11 +9,10 @@ description = "Silent, loop-safe vertical video generation for How People Relate
 requires-python = ">=3.11"
 
 [project.optional-dependencies]
-render = ["imageio-ffmpeg>=0.5"]
+render = ["imageio-ffmpeg>=0.5", "numpy>=2", "Pillow>=11"]
 
 [project.scripts]
 hpr-video = "hpr_video_generator.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

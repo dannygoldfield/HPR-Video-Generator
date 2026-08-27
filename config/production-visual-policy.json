@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "decisionDate": "2026-08-21",
+  "durationSec": 11,
+  "frameRate": 24,
+  "frameCount": 264,
+  "geometry": "fixed",
+  "filmGrain": {
+    "enabled": false,
+    "opacity": 0,
+    "source": null,
+    "decision": "rejected",
+    "reason": "The completed film-grain comparisons did not improve the portrait enough to justify an additional visible layer."
+  },
+  "finalVisualCandidates": [
+    {
+      "project": "NYChildren",
+      "visualId": "VIS-30FE48FB73CE-PDE-002",
+      "developmentRecipeId": "PDE-002",
+      "backgroundRecipeId": null
+    },
+    {
+      "project": "10000",
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "developmentRecipeId": "PDE-002",
+      "backgroundRecipeId": null
+    },
+    {
+      "project": "Infinity",
+      "visualId": "VIS-4DF5D853ACDA-IBN-001",
+      "developmentRecipeId": "PDE-002",
+      "backgroundRecipeId": "IBN-001"
+    }
+  ]
+}

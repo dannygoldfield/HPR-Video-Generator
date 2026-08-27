@@ -1,0 +1,102 @@
+{
+  "version": "0.4.0",
+  "experimentId": "infinity-background-flat-fields-v13",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Regular"
+  },
+  "principle": "Apply Danny's v12 review notes while removing every z-axis cue from the number studies. Digits remain on a flat plane: their assigned size and opacity do not change over time. Dense number fields, stronger 2D background events, full-frame panel travel, and two intentional loop resets are tested while PDE-002 and subject geometry remain fixed.",
+  "recipes": [
+    {
+      "id": "IBF-001",
+      "name": "Dense varied-size 2D drift",
+      "effect": "flat_number_drift",
+      "strength": 0.34,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 9.0, "activePixelsAbove3Percent": 12.0},
+      "parameters": {"columns": 10, "rows": 18, "minimumSize": 14, "maximumSize": 38, "opacity": 150, "color": [0.47, 0.46, 0.44], "digitOffset": 3},
+      "description": "A dense flat field of single digits drifts slowly in two dimensions. Sizes are evenly distributed once and remain fixed, so nothing grows, shrinks, advances, or recedes."
+    },
+    {
+      "id": "IBF-002",
+      "name": "Dense same-size 2D plane",
+      "effect": "flat_number_grid",
+      "strength": 0.34,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 9.0, "activePixelsAbove3Percent": 11.0},
+      "parameters": {"columns": 9, "rows": 17, "minimumSize": 26, "maximumSize": 26, "opacity": 148, "color": [0.47, 0.46, 0.44], "digitOffset": 7},
+      "description": "All digits share one fixed size on a single flat plane and move slowly together around the frame, with edge entries and exits but no scale or depth change."
+    },
+    {
+      "id": "IBF-003",
+      "name": "Orderly 2D separation field",
+      "effect": "flat_number_separation",
+      "strength": 0.35,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 9.0, "activePixelsAbove3Percent": 12.0},
+      "parameters": {"columns": 10, "rows": 18, "minimumSize": 16, "maximumSize": 30, "opacity": 150, "color": [0.45, 0.44, 0.42], "digitOffset": 1},
+      "description": "A denser, orderly field separates laterally around the subject and returns. The changing relationship comes only from x-y position; each digit keeps its assigned 2D size."
+    },
+    {
+      "id": "IBF-004",
+      "name": "Visible 2D gradient curtain",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 10.0, "p95Delta8Bit": 22.0, "activePixelsAbove3Percent": 50.0},
+      "parameters": {"bandWidth": 0.23, "colorA": [0.67, 0.65, 0.61], "colorB": [0.84, 0.81, 0.76]},
+      "description": "A stronger two-tone vertical gradient travels fully across the background and back so the event is visible rather than merely measurable."
+    },
+    {
+      "id": "IBF-005",
+      "name": "Full-width sliding panel",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 12.0, "p95Delta8Bit": 24.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"feather": 0.009, "color": [0.76, 0.74, 0.70]},
+      "description": "The panel enters from the right, crosses all the way to the left edge, and returns within 11 seconds using eased acceleration and deceleration."
+    },
+    {
+      "id": "IBF-006",
+      "name": "Eleven-second hinged door",
+      "effect": "hinged_door_one_way",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 12.0, "p95Delta8Bit": 24.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"featherPixels": 0.6, "color": [0.74, 0.72, 0.68]},
+      "description": "The hinged plane begins opening immediately and spends the full 11 seconds disappearing. The loop deliberately resets to the next closed door instead of disguising the cut."
+    },
+    {
+      "id": "IBF-007",
+      "name": "Dense 2D number wipe",
+      "effect": "flat_number_wipe",
+      "strength": 0.36,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 18.0, "p95Delta8Bit": 40.0, "activePixelsAbove3Percent": 55.0},
+      "parameters": {"columns": 11, "rows": 20, "minimumSize": 13, "maximumSize": 31, "opacity": 145, "numberColor": [0.55, 0.54, 0.52], "panelColor": [0.55, 0.54, 0.52], "digitOffset": 5, "feather": 0.009},
+      "description": "A very dense, flat field of varied-size digits is erased from right to left by a full-frame panel. The hard loop reset restores the number field and restarts the wipe."
+    }
+  ]
+}

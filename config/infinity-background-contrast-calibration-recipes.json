@@ -1,0 +1,90 @@
+{
+  "version": "0.7.0",
+  "experimentId": "infinity-background-contrast-calibration-v16",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Bold"
+  },
+  "principle": "Calibrate the minimum neutral-background contrast that remains visible after H.264 delivery and mobile-size review before rebuilding the full Infinity background family. Hold the light endpoint, motion, timing, subject, and portrait treatment constant. Test three darker endpoints at full color strength in both a thin number field and a broad panel.",
+  "recipes": [
+    {
+      "id": "IBK-001",
+      "name": "Thin numbers — subtle contrast",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.25, "p95Delta8Bit": 1.0, "activePixelsAbove3Percent": 0.1},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "Brandon Grotesque Bold number columns test the subtle #edeae3 endpoint against the fixed #f7f5ef field. The digits reach the specified darker color at full strength; only antialiased edges interpolate."
+    },
+    {
+      "id": "IBK-002",
+      "name": "Broad panel — subtle contrast",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 1.0, "p95Delta8Bit": 6.0, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.7, "feather": 0.012, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0},
+      "description": "A full-width panel tests the subtle #edeae3 endpoint against #f7f5ef at full strength, using the same gentle acceleration in every panel candidate."
+    },
+    {
+      "id": "IBK-003",
+      "name": "Thin numbers — middle contrast",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 2.0, "activePixelsAbove3Percent": 0.5},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.909804, 0.894118, 0.862745], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "The identical number construction tests the middle #e8e4dc endpoint against #f7f5ef at full strength."
+    },
+    {
+      "id": "IBK-004",
+      "name": "Broad panel — middle contrast",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 10.0, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.7, "feather": 0.012, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.909804, 0.894118, 0.862745], "maximumMix": 1.0},
+      "description": "The identical panel construction tests the middle #e8e4dc endpoint against #f7f5ef at full strength."
+    },
+    {
+      "id": "IBK-005",
+      "name": "Thin numbers — stronger contrast",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.75, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 1.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.886275, 0.866667, 0.831373], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "The identical number construction tests the stronger #e2ddd4 endpoint against #f7f5ef at full strength."
+    },
+    {
+      "id": "IBK-006",
+      "name": "Broad panel — stronger contrast",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 3.0, "p95Delta8Bit": 15.0, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.7, "feather": 0.012, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.886275, 0.866667, 0.831373], "maximumMix": 1.0},
+      "description": "The identical panel construction tests the stronger #e2ddd4 endpoint against #f7f5ef at full strength."
+    }
+  ]
+}

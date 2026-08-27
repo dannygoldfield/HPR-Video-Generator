@@ -1,0 +1,54 @@
+{
+  "version": "0.8.0",
+  "experimentId": "infinity-background-number-blobs-v17",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Bold"
+  },
+  "principle": "Reduce the Infinity background system to one repeatable production grammar: the accepted subtle planar number field plus one, two, or three softly feathered organic blobs moving behind it. Hold every number, color, motion, subject, and portrait-development variable constant so blob count is the only comparison. All trajectories and shape changes are deterministic closed functions for invisible looping.",
+  "recipes": [
+    {
+      "id": "IBL-001",
+      "name": "Subtle numbers + one looping blob",
+      "effect": "flat_number_blobs",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 5.5, "p95Delta8Bit": 14.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "balancedRandomDigits": true, "numberSeed": "infinity-number-grammar-v17", "backgroundColor": [0.968627, 0.960784, 0.937255], "numberColor": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04, "blobCount": 1, "blobSeed": "infinity-blob-grammar-v17", "blobColor": [0.929412, 0.917647, 0.890196], "blobOpacity": 0.72, "blobMaximumMix": 0.72, "blobFeather": 0.18},
+      "description": "The accepted subtle number field remains crisp while one softly feathered irregular blob of the same neutral moves and changes shape behind it on a closed 11-second path."
+    },
+    {
+      "id": "IBL-002",
+      "name": "Subtle numbers + two looping blobs",
+      "effect": "flat_number_blobs",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 5.5, "p95Delta8Bit": 14.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "balancedRandomDigits": true, "numberSeed": "infinity-number-grammar-v17", "backgroundColor": [0.968627, 0.960784, 0.937255], "numberColor": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04, "blobCount": 2, "blobSeed": "infinity-blob-grammar-v17", "blobColor": [0.929412, 0.917647, 0.890196], "blobOpacity": 0.72, "blobMaximumMix": 0.72, "blobFeather": 0.18},
+      "description": "The identical number field and first blob remain unchanged while a second independently shaped closed-path blob joins behind them."
+    },
+    {
+      "id": "IBL-003",
+      "name": "Subtle numbers + three looping blobs",
+      "effect": "flat_number_blobs",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 5.5, "p95Delta8Bit": 14.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "balancedRandomDigits": true, "numberSeed": "infinity-number-grammar-v17", "backgroundColor": [0.968627, 0.960784, 0.937255], "numberColor": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0, "bleedEdges": true, "travelX": 0.12, "travelY": 0.04, "blobCount": 3, "blobSeed": "infinity-blob-grammar-v17", "blobColor": [0.929412, 0.917647, 0.890196], "blobOpacity": 0.72, "blobMaximumMix": 0.72, "blobFeather": 0.18},
+      "description": "The identical number field and first two blobs remain unchanged while a third deterministic closed-path blob completes the denser variant."
+    }
+  ]
+}

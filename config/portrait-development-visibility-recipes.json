@@ -1,0 +1,74 @@
+{
+  "version": "0.4.0",
+  "experimentId": "portrait-development-visibility-v8",
+  "mask": {
+    "width": 135,
+    "height": 240,
+    "backgroundInfluence": 0.24,
+    "focalRadiusX": 0.62,
+    "focalRadiusY": 0.58
+  },
+  "surrogate": {
+    "model": "finished-source-one-direction",
+    "temperatureRedGain": 0.965,
+    "temperatureGreenGain": 1.01,
+    "temperatureBlueGain": 1.04,
+    "blackLift": 0.018,
+    "shadowSuppression": 0.105,
+    "shadowCenter": 0.25,
+    "shadowWidth": 0.17,
+    "highlightVeil": 0.09,
+    "highlightCenter": 0.79,
+    "highlightWidth": 0.17,
+    "textureSoftening": 0.24,
+    "textureBlurRadiusAt1080": 1.45,
+    "principle": "Keep the approved source response unchanged and deliberately expose much more of its surrogate-to-finished range so conscious visibility can be judged without adding a new kind of image treatment."
+  },
+  "recipes": [
+    {
+      "id": "PDD-001",
+      "name": "Daring sparse activation",
+      "mode": "activation_field",
+      "baseFinalMix": 0.25,
+      "patchCount": 4,
+      "patchSizeMin": 0.20,
+      "patchSizeMax": 0.38,
+      "feather": 0.72,
+      "neighborCoupling": 0.76,
+      "speed": 0.90,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.064,
+      "easePower": 1.15
+    },
+    {
+      "id": "PDD-002",
+      "name": "Daring soft sweep",
+      "mode": "soft_sweep",
+      "baseFinalMix": 0.25,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.72,
+      "neighborCoupling": 0.0,
+      "speed": 1.05,
+      "direction": [0.72, 0.28],
+      "finishedHold": 0.064,
+      "easePower": 1.15
+    },
+    {
+      "id": "PDD-003",
+      "name": "Full-range activation — deliberate ceiling",
+      "mode": "activation_field",
+      "baseFinalMix": 0.0,
+      "patchCount": 6,
+      "patchSizeMin": 0.20,
+      "patchSizeMax": 0.42,
+      "feather": 0.62,
+      "neighborCoupling": 0.72,
+      "speed": 1.15,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.04,
+      "easePower": 1.0
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "version": "0.3.0",
+  "experimentId": "infinity-background-concepts-v12",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Regular"
+  },
+  "principle": "Translate Danny's Photoshop sketches into seven unmistakably different spatial events behind the isolated Infinity subject. Preserve the light background, the five-star PDE-002 portrait surface, and fixed subject geometry. This is a concept-discovery round: every event must be legible at mobile review size, even if it later needs restraint.",
+  "recipes": [
+    {
+      "id": "IBC-001",
+      "name": "Deep number field",
+      "effect": "number_depth_field",
+      "strength": 0.34,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 11.0, "activePixelsAbove3Percent": 9.0},
+      "parameters": {"digitCount": 30, "minimumSize": 17, "maximumSize": 88, "vanishingX": 0.52, "vanishingY": 0.47, "color": [0.46, 0.45, 0.43]},
+      "description": "Individual Brandon Grotesque digits occupy several depths and slowly recede toward a vanishing area, placing the subject ahead of a moving numerical space."
+    },
+    {
+      "id": "IBC-002",
+      "name": "Side-entering numbers",
+      "effect": "number_side_streams",
+      "strength": 0.36,
+      "speed": 1.0,
+      "visibilityBoost": 1.35,
+      "perceptualFloor": {"meanDelta8Bit": 1.5, "p95Delta8Bit": 10.0, "activePixelsAbove3Percent": 6.0},
+      "parameters": {"digitCount": 24, "minimumSize": 18, "maximumSize": 108, "vanishingX": 0.52, "vanishingY": 0.48, "color": [0.43, 0.42, 0.40]},
+      "description": "Single digits enter from both side edges, pass behind the subject, and diminish into depth instead of behaving like a flat typographic wallpaper."
+    },
+    {
+      "id": "IBC-003",
+      "name": "Evasive number corridor",
+      "effect": "number_evasive_corridor",
+      "strength": 0.38,
+      "speed": 1.0,
+      "visibilityBoost": 1.35,
+      "perceptualFloor": {"meanDelta8Bit": 1.5, "p95Delta8Bit": 11.0, "activePixelsAbove3Percent": 7.0},
+      "parameters": {"digitCount": 22, "minimumSize": 20, "maximumSize": 118, "vanishingX": 0.54, "vanishingY": 0.46, "color": [0.40, 0.39, 0.38]},
+      "description": "Larger digits travel on curved side corridors and disappear behind the isolated figure, making the pose seem to evade their paths without moving the person."
+    },
+    {
+      "id": "IBC-004",
+      "name": "Moving gradient curtain",
+      "effect": "gradient_curtain",
+      "strength": 0.34,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "perceptualFloor": {"meanDelta8Bit": 8.0, "p95Delta8Bit": 18.0, "activePixelsAbove3Percent": 48.0},
+      "parameters": {"bandWidth": 0.30, "color": [0.73, 0.70, 0.65]},
+      "description": "A broad, low-contrast tonal curtain crosses the light field behind the subject, testing whether a Lightroom-like gradient can become spatial rather than decorative."
+    },
+    {
+      "id": "IBC-005",
+      "name": "Sliding panel",
+      "effect": "sliding_panel",
+      "strength": 0.36,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "perceptualFloor": {"meanDelta8Bit": 8.0, "p95Delta8Bit": 20.0, "activePixelsAbove3Percent": 35.0},
+      "parameters": {"feather": 0.012, "color": [0.78, 0.76, 0.72]},
+      "description": "A distinct vertical edge carries a quiet two-dimensional panel across the background and back, like a restrained sliding door."
+    },
+    {
+      "id": "IBC-006",
+      "name": "Hinged perspective door",
+      "effect": "hinged_door",
+      "strength": 0.38,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "perceptualFloor": {"meanDelta8Bit": 8.0, "p95Delta8Bit": 20.0, "activePixelsAbove3Percent": 32.0},
+      "parameters": {"featherPixels": 0.6, "color": [0.76, 0.74, 0.70]},
+      "description": "A background plane remains hinged to the left edge while its far edge contracts in perspective, opening away from the viewer as in Danny's quadrilateral sketch."
+    },
+    {
+      "id": "IBC-007",
+      "name": "Number doorway",
+      "effect": "number_doorway",
+      "strength": 0.38,
+      "speed": 1.0,
+      "visibilityBoost": 1.25,
+      "perceptualFloor": {"meanDelta8Bit": 7.0, "p95Delta8Bit": 19.0, "activePixelsAbove3Percent": 30.0},
+      "parameters": {"digitCount": 28, "minimumSize": 15, "maximumSize": 82, "vanishingX": 0.52, "vanishingY": 0.47, "numberColor": [0.43, 0.42, 0.40], "doorColor": [0.82, 0.80, 0.76]},
+      "description": "Two perspective panels open to reveal a receding field of individual digits, combining the door and numerical-space ideas as one legible event."
+    }
+  ]
+}

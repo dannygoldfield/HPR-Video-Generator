@@ -1,0 +1,69 @@
+{
+  "version": "0.1.0",
+  "recipes": [
+    {
+      "id": "MR-001",
+      "name": "Smooth baseline",
+      "rhythmType": "baseline",
+      "loopSafe": true,
+      "holds": [],
+      "keyframes": [
+        {"time": 0.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.5, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "MR-002",
+      "name": "Variable speed",
+      "rhythmType": "variable_speed",
+      "loopSafe": true,
+      "holds": [],
+      "keyframes": [
+        {"time": 0.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_sine"},
+        {"time": 0.30, "scale": 1.027, "x": 0.0, "y": 0.0, "easingToNext": "ease_out_sine"},
+        {"time": 0.52, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "MR-003",
+      "name": "Brief hold",
+      "rhythmType": "hold",
+      "loopSafe": true,
+      "holds": [{"start": 0.38, "end": 0.52}],
+      "keyframes": [
+        {"time": 0.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.38, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "linear"},
+        {"time": 0.52, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "MR-004",
+      "name": "Two stage with near-stillness",
+      "rhythmType": "two_stage",
+      "loopSafe": true,
+      "holds": [{"start": 0.28, "end": 0.43}],
+      "keyframes": [
+        {"time": 0.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "ease_out_sine"},
+        {"time": 0.28, "scale": 1.028, "x": 0.0, "y": 0.0, "easingToNext": "linear"},
+        {"time": 0.43, "scale": 1.0283, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.68, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "MR-005",
+      "name": "Asymmetric approach and return",
+      "rhythmType": "asymmetric",
+      "loopSafe": true,
+      "holds": [],
+      "keyframes": [
+        {"time": 0.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.67, "scale": 1.0325, "x": 0.0, "y": 0.0, "easingToNext": "ease_out_sine"},
+        {"time": 1.0, "scale": 1.025, "x": 0.0, "y": 0.0, "easingToNext": "linear"}
+      ]
+    }
+  ]
+}

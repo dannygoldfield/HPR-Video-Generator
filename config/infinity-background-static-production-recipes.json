@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "experimentId": "infinity-background-static-production-v26",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Bold"
+  },
+  "principle": "Ship Infinity with a completely static field of subtle Brandon Grotesque Bold digits behind the fixed subject. Preserve the accepted IBK-001 density, size, and #edeae3 on #f7f5ef palette. Derive a deterministic digit arrangement from portrait identity so every Infinity portrait is unique without adding background motion.",
+  "recipes": [
+    {
+      "id": "IBN-001",
+      "name": "Static portrait-unique number field",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.0,
+      "visibilityBoost": 2.50,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.25, "p95Delta8Bit": 1.0, "activePixelsAbove3Percent": 0.1},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 255, "balancedRandomDigits": true, "portraitUniqueLayout": true, "numberMotion": "static", "positionLayout": "grid", "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.929412, 0.917647, 0.890196], "maximumMix": 1.0, "bleedEdges": true},
+      "description": "A completely still 13-by-21 field of subtle single digits. Portrait identity determines which digits occupy the fixed grid, giving every Infinity video a unique but visually consistent background."
+    }
+  ]
+}

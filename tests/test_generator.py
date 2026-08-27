@@ -5,10 +5,13 @@ from hpr_video_generator.config import load_config
 from hpr_video_generator.generator import build_filter, build_texture_filter, motion_state
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
 class GeneratorTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.config = load_config(Path("config/generator.xml"))
+        cls.config = load_config(ROOT / "config/generator.xml")
 
     def test_every_motion_returns_to_start(self):
         frames = self.config.duration_sec * self.config.fps

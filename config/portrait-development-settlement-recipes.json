@@ -1,0 +1,74 @@
+{
+  "version": "0.5.0",
+  "experimentId": "portrait-development-settlement-v9",
+  "mask": {
+    "width": 135,
+    "height": 240,
+    "backgroundInfluence": 0.24,
+    "focalRadiusX": 0.62,
+    "focalRadiusY": 0.58
+  },
+  "surrogate": {
+    "model": "finished-source-one-direction",
+    "temperatureRedGain": 0.965,
+    "temperatureGreenGain": 1.01,
+    "temperatureBlueGain": 1.04,
+    "blackLift": 0.018,
+    "shadowSuppression": 0.105,
+    "shadowCenter": 0.25,
+    "shadowWidth": 0.17,
+    "highlightVeil": 0.09,
+    "highlightCenter": 0.79,
+    "highlightWidth": 0.17,
+    "textureSoftening": 0.24,
+    "textureBlurRadiusAt1080": 1.45,
+    "principle": "Preserve the approved source response and settle every continuous field parameter exactly 65 percent of the way from the possible-finals round toward the visibility-boundary round. Integer patch counts use the nearest practical whole number."
+  },
+  "recipes": [
+    {
+      "id": "PDE-001",
+      "name": "Settled sparse activation — 65% toward visible",
+      "mode": "activation_field",
+      "baseFinalMix": 0.4075,
+      "patchCount": 4,
+      "patchSizeMin": 0.193,
+      "patchSizeMax": 0.3555,
+      "feather": 0.734,
+      "neighborCoupling": 0.76,
+      "speed": 0.837,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.0864,
+      "easePower": 1.2025
+    },
+    {
+      "id": "PDE-002",
+      "name": "Settled soft sweep — 65% toward visible",
+      "mode": "soft_sweep",
+      "baseFinalMix": 0.4075,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.804,
+      "neighborCoupling": 0.0,
+      "speed": 0.98,
+      "direction": [0.72, 0.28],
+      "finishedHold": 0.0864,
+      "easePower": 1.2375
+    },
+    {
+      "id": "PDE-003",
+      "name": "Settled activation ceiling — 65% toward visible",
+      "mode": "activation_field",
+      "baseFinalMix": 0.175,
+      "patchCount": 5,
+      "patchSizeMin": 0.20,
+      "patchSizeMax": 0.399,
+      "feather": 0.697,
+      "neighborCoupling": 0.755,
+      "speed": 1.0275,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.0708,
+      "easePower": 1.0875
+    }
+  ]
+}

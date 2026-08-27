@@ -1,0 +1,84 @@
+{
+  "version": "0.2.0",
+  "experimentId": "infinity-background-visibility-v11",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "principle": "Preserve the five-star PDE-002 subject treatment and the supplied light-background foundation while making each of the seven background concepts unmistakably different at the 280-pixel mobile review size. This is a visibility-calibration round, so a treatment may go too far.",
+  "recipes": [
+    {
+      "id": "IBV-001",
+      "name": "Visible momentum wake",
+      "effect": "momentum_wake",
+      "strength": 0.30,
+      "speed": 1.10,
+      "visibilityBoost": 1.55,
+      "perceptualFloor": {"meanDelta8Bit": 5.0, "p95Delta8Bit": 12.0, "activePixelsAbove3Percent": 35.0},
+      "description": "A broad warm wake becomes clearly legible behind the pose, establishing how much directional atmosphere the portrait can tolerate."
+    },
+    {
+      "id": "IBV-002",
+      "name": "Visible emulsion bloom",
+      "effect": "emulsion_bloom",
+      "strength": 0.24,
+      "speed": 0.90,
+      "visibilityBoost": 1.45,
+      "perceptualFloor": {"meanDelta8Bit": 7.0, "p95Delta8Bit": 14.0, "activePixelsAbove3Percent": 50.0},
+      "description": "Large overlapping density blooms visibly gather and dissolve while retaining the supplied photographic background."
+    },
+    {
+      "id": "IBV-003",
+      "name": "Visible floating print",
+      "effect": "floating_print",
+      "strength": 0.26,
+      "speed": 0.85,
+      "visibilityBoost": 1.65,
+      "perceptualFloor": {"meanDelta8Bit": 4.0, "p95Delta8Bit": 18.0, "activePixelsAbove3Percent": 18.0},
+      "description": "A broader shifting cast shadow deliberately tests the point where physical separation becomes either dimensional or cutout-like."
+    },
+    {
+      "id": "IBV-004",
+      "name": "Visible negative-space aperture",
+      "effect": "negative_space_aperture",
+      "strength": 0.18,
+      "speed": 0.82,
+      "visibilityBoost": 1.35,
+      "perceptualFloor": {"meanDelta8Bit": 8.0, "p95Delta8Bit": 16.0, "activePixelsAbove3Percent": 65.0},
+      "description": "The space around the face and gesture opens against a visibly deepening perimeter, testing a portrait-like vignette without a literal spotlight."
+    },
+    {
+      "id": "IBV-005",
+      "name": "Visible residual gesture",
+      "effect": "residual_gesture",
+      "strength": 0.30,
+      "speed": 1.00,
+      "visibilityBoost": 1.75,
+      "perceptualFloor": {"meanDelta8Bit": 3.0, "p95Delta8Bit": 12.0, "activePixelsAbove3Percent": 18.0},
+      "description": "Displaced traces of the pose become visible enough to judge whether remembered gesture adds energy or merely reads as an echo."
+    },
+    {
+      "id": "IBV-006",
+      "name": "Visible incomplete geometry",
+      "effect": "incomplete_geometry",
+      "strength": 0.32,
+      "speed": 1.05,
+      "visibilityBoost": 2.00,
+      "perceptualFloor": {"meanDelta8Bit": 1.5, "p95Delta8Bit": 10.0, "activePixelsAbove3Percent": 6.0},
+      "description": "Thicker arcs, points, and partial relationships intentionally approach the graphic boundary so the concept can finally be evaluated."
+    },
+    {
+      "id": "IBV-007",
+      "name": "Visible borrowed-color field",
+      "effect": "borrowed_color_field",
+      "strength": 0.24,
+      "speed": 0.86,
+      "visibilityBoost": 1.45,
+      "perceptualFloor": {"meanDelta8Bit": 9.0, "p95Delta8Bit": 18.0, "activePixelsAbove3Percent": 70.0},
+      "description": "Broad fields borrow visibly restrained skin and clothing color, testing whether chromatic atmosphere can connect the person to the empty space."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": "0.1.0",
+  "experimentId": "white-balance-pilot-v3",
+  "valueSystem": {
+    "name": "HPR white-balance delta",
+    "minimum": -10,
+    "maximum": 10,
+    "neutral": 0,
+    "lightroomEquivalent": false,
+    "note": "Diagnostic creative values; not Lightroom slider units"
+  },
+  "recipes": [
+    {
+      "id": "WBP-001",
+      "name": "Accurate export reference",
+      "adjustmentType": "reference",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBP-002",
+      "name": "Temperature search",
+      "adjustmentType": "temperature_only",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.22, "temperature": -6.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.48, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.72, "temperature": 6.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBP-003",
+      "name": "Tint search",
+      "adjustmentType": "tint_only",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.22, "temperature": 0.0, "tint": -6.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.48, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.72, "temperature": 0.0, "tint": 6.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBP-004",
+      "name": "Sequential temperature then tint correction",
+      "adjustmentType": "sequential",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.16, "temperature": -5.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.32, "temperature": 3.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.45, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.58, "temperature": 0.0, "tint": -5.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.74, "temperature": 0.0, "tint": 3.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.88, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBP-005",
+      "name": "Coupled white-balance fine-tuning",
+      "adjustmentType": "coupled",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.2, "temperature": -4.0, "tint": 2.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.4, "temperature": 0.0, "tint": -4.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.6, "temperature": 4.0, "tint": -2.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.8, "temperature": 0.0, "tint": 4.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    }
+  ]
+}

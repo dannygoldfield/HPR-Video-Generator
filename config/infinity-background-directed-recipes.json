@@ -1,0 +1,150 @@
+{
+  "version": "0.5.0",
+  "experimentId": "infinity-background-directed-variations-v14",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Bold"
+  },
+  "principle": "Translate Danny's v13 notes into eleven discrete, reproducible background tests. IBF-003 is rejected and omitted. Number fields use equal populations of the single digits 1 through 9 and 0, fixed size, fixed opacity, and coordinated planar motion. Curtain direction, palette, panel lightness, door acceleration, wipe acceleration, and hard resets are recorded explicitly while PDE-002 and subject geometry remain unchanged.",
+  "recipes": [
+    {
+      "id": "IBR-001",
+      "name": "Dense overlapping number loop",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.25,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 8.0, "p95Delta8Bit": 28.0, "activePixelsAbove3Percent": 50.0},
+      "parameters": {"columns": 12, "rows": 35, "minimumSize": 34, "maximumSize": 34, "opacity": 170, "color": [0.50, 0.48, 0.45], "balancedRandomDigits": true, "jitterX": 0.95, "jitterY": 0.95, "travelX": 0.12, "travelY": 0.05},
+      "description": "A field of 420 bold, equal-size single digits covers more than half the background. The balanced digit population is assembled in a deterministic random order, and the entire plane follows one small closed path at one-quarter of the prior motion magnitude."
+    },
+    {
+      "id": "IBR-002",
+      "name": "Coordinated slow number columns",
+      "effect": "flat_number_grid",
+      "strength": 0.38,
+      "speed": 0.22,
+      "visibilityBoost": 1.28,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 5.0, "p95Delta8Bit": 22.0, "activePixelsAbove3Percent": 25.0},
+      "parameters": {"columns": 11, "rows": 20, "minimumSize": 30, "maximumSize": 30, "opacity": 165, "color": [0.50, 0.48, 0.45], "balancedRandomDigits": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "Bold equal-size digits remain aligned in close columns. Every number shares the same very slow x-y movement, so the field behaves as one flat plane rather than as independently moving objects."
+    },
+    {
+      "id": "IBR-003",
+      "name": "Coordinated columns — reversed palette",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.30,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 18.0, "p95Delta8Bit": 30.0, "activePixelsAbove3Percent": 90.0},
+      "parameters": {"columns": 11, "rows": 20, "minimumSize": 30, "maximumSize": 30, "opacity": 165, "backgroundColor": [0.63, 0.61, 0.58], "color": [0.96, 0.94, 0.90], "balancedRandomDigits": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "The coordinated column construction is repeated with its tonal relationship reversed: a darker warm field carries lighter digits. All numbers still share one slow velocity and retain one fixed size."
+    },
+    {
+      "id": "IBR-004",
+      "name": "Gradient curtain — reversed colors",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 10.0, "p95Delta8Bit": 22.0, "activePixelsAbove3Percent": 50.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 0.0, "colorA": [0.84, 0.81, 0.76], "colorB": [0.67, 0.65, 0.61]},
+      "description": "The accepted horizontal curtain repeats with its two warm neutral colors exchanging roles. The path remains a closed horizontal crossing and return."
+    },
+    {
+      "id": "IBR-005",
+      "name": "Gradient curtain — top to bottom",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 10.0, "p95Delta8Bit": 22.0, "activePixelsAbove3Percent": 50.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 90.0, "reverseTravel": true, "colorA": [0.67, 0.65, 0.61], "colorB": [0.84, 0.81, 0.76]},
+      "description": "The same two-tone curtain travels from the top toward the bottom and returns, testing a vertical event without changing the portrait or introducing depth."
+    },
+    {
+      "id": "IBR-006",
+      "name": "Gradient curtain — fixed 31-degree angle",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 10.0, "p95Delta8Bit": 22.0, "activePixelsAbove3Percent": 50.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 31.0, "colorA": [0.67, 0.65, 0.61], "colorB": [0.84, 0.81, 0.76]},
+      "description": "A reproducibly assigned 31-degree curtain crosses the flat background and returns. The angle is fixed in the manifest so a successful random direction can be recreated exactly."
+    },
+    {
+      "id": "IBR-007",
+      "name": "One-way panel — light warm pair",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 16.0, "p95Delta8Bit": 26.0, "activePixelsAbove3Percent": 90.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.0, "feather": 0.009, "backgroundColor": [0.94, 0.92, 0.88], "color": [0.72, 0.69, 0.64]},
+      "description": "A darker warm panel enters immediately and completes one full crossing during the 11 seconds. Replay cuts abruptly to the all-light first frame, inviting the motion to begin again."
+    },
+    {
+      "id": "IBR-008",
+      "name": "One-way panel — quiet neutral pair",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 16.0, "p95Delta8Bit": 26.0, "activePixelsAbove3Percent": 90.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.0, "feather": 0.009, "backgroundColor": [0.90, 0.89, 0.87], "color": [0.64, 0.65, 0.66]},
+      "description": "The same one-way 11-second crossing uses a second fixed lightness assignment: a quieter neutral light field and a cooler darker panel, followed by the same abrupt all-light replay."
+    },
+    {
+      "id": "IBR-009",
+      "name": "Accelerating hinged door",
+      "effect": "hinged_door_one_way",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 12.0, "p95Delta8Bit": 24.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"easingExponent": 2.4, "featherPixels": 0.6, "color": [0.74, 0.72, 0.68]},
+      "description": "The hinged plane begins slowly, then accelerates increasingly as it opens, with the strongest speed increase near the end. Replay deliberately restores the closed door."
+    },
+    {
+      "id": "IBR-010",
+      "name": "Static-number accelerating wipe",
+      "effect": "flat_number_wipe",
+      "strength": 0.38,
+      "speed": 1.0,
+      "visibilityBoost": 1.28,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 18.0, "p95Delta8Bit": 40.0, "activePixelsAbove3Percent": 55.0},
+      "parameters": {"columns": 12, "rows": 30, "minimumSize": 32, "maximumSize": 32, "opacity": 170, "balancedRandomDigits": true, "jitterX": 0.30, "jitterY": 0.30, "numberMotion": "static", "numberColor": [0.53, 0.52, 0.50], "panelColor": [0.56, 0.55, 0.53], "wipeEasingExponent": 1.8, "feather": 0.009},
+      "description": "A dense flat field of bold, equal-size digits remains completely still while a right-to-left wipe starts slowly and accelerates. The full panel cuts back to the restored number field at replay."
+    },
+    {
+      "id": "IBR-011",
+      "name": "Moving-number accelerating wipe",
+      "effect": "flat_number_wipe",
+      "strength": 0.38,
+      "speed": 1.0,
+      "visibilityBoost": 1.28,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 18.0, "p95Delta8Bit": 40.0, "activePixelsAbove3Percent": 55.0},
+      "parameters": {"columns": 12, "rows": 30, "minimumSize": 32, "maximumSize": 32, "opacity": 170, "balancedRandomDigits": true, "jitterX": 0.30, "jitterY": 0.30, "numberMotion": "linear_left", "linearTravel": 0.28, "numberColor": [0.53, 0.52, 0.50], "panelColor": [0.56, 0.55, 0.53], "wipeEasingExponent": 1.8, "feather": 0.009},
+      "description": "The same dense equal-size number field moves left as one coordinated plane while the wipe accelerates from right to left. Every digit has the same velocity; none scales or suggests depth."
+    }
+  ]
+}

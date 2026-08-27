@@ -1,0 +1,150 @@
+{
+  "version": "0.6.0",
+  "experimentId": "infinity-background-fixed-palette-v15",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "font": {
+    "family": "Brandon Grotesque",
+    "style": "Bold"
+  },
+  "principle": "Apply every v14 review note while enforcing one exact low-contrast palette across the entire round. The only background-graphic endpoints are #f0eee9 and #f7f5ef; candidates may exchange their roles or interpolate between them but may not introduce a third neutral. Number motion remains planar and coordinated, columns bleed beyond the frame, wipe fields abandon visible rows and columns, and all parameters remain reproducible.",
+  "recipes": [
+    {
+      "id": "IBP-001",
+      "name": "Dense overlapping loop — fixed palette",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.25,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 1.5, "activePixelsAbove3Percent": 5.0},
+      "parameters": {"columns": 12, "rows": 35, "minimumSize": 34, "maximumSize": 34, "opacity": 170, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.941176, 0.933333, 0.913725], "balancedRandomDigits": true, "jitterX": 0.95, "jitterY": 0.95, "travelX": 0.12, "travelY": 0.05},
+      "description": "The accepted dense overlapping construction keeps its 420 balanced, bold, equal-size digits and closed one-quarter-magnitude path. Its only graphic colors are #f0eee9 and #f7f5ef."
+    },
+    {
+      "id": "IBP-002",
+      "name": "Extra-slow columns with edge bleed",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.10,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 1.5, "activePixelsAbove3Percent": 5.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 180, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.941176, 0.933333, 0.913725], "bleedEdges": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "Close bold columns move together at less than half the v14 magnitude. Digit centers sit on every frame boundary so partial columns visibly continue beyond all four edges; contrast is limited to #f0eee9 against #f7f5ef."
+    },
+    {
+      "id": "IBP-003",
+      "name": "Extra-slow columns — palette reversed",
+      "effect": "flat_number_grid",
+      "strength": 0.40,
+      "speed": 0.14,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 13, "rows": 21, "minimumSize": 30, "maximumSize": 30, "opacity": 180, "backgroundColor": [0.941176, 0.933333, 0.913725], "color": [0.968627, 0.960784, 0.937255], "bleedEdges": true, "travelX": 0.12, "travelY": 0.04},
+      "description": "The same edge-bleeding coordinated columns exchange the two exact palette roles: #f7f5ef digits on #f0eee9. Motion remains uniformly extra slow."
+    },
+    {
+      "id": "IBP-004",
+      "name": "Reversed curtain — fixed palette",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 1.5, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 0.0, "backgroundColor": [0.941176, 0.933333, 0.913725], "colorA": [0.968627, 0.960784, 0.937255], "colorB": [0.941176, 0.933333, 0.913725]},
+      "description": "The horizontal reversed-color curtain now uses only #f0eee9 and #f7f5ef, placing its movement at the edge of conscious notice."
+    },
+    {
+      "id": "IBP-005",
+      "name": "Top-to-bottom curtain — fixed palette",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 1.5, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 90.0, "reverseTravel": true, "backgroundColor": [0.968627, 0.960784, 0.937255], "colorA": [0.941176, 0.933333, 0.913725], "colorB": [0.968627, 0.960784, 0.937255]},
+      "description": "The vertical curtain keeps its top-to-bottom path while reducing the entire event to the #f0eee9 and #f7f5ef contrast interval."
+    },
+    {
+      "id": "IBP-006",
+      "name": "31-degree curtain — fixed palette",
+      "effect": "gradient_curtain_2d",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "continuous",
+      "perceptualFloor": {"meanDelta8Bit": 0.5, "p95Delta8Bit": 1.5, "activePixelsAbove3Percent": 20.0},
+      "parameters": {"bandWidth": 0.23, "angleDegrees": 31.0, "backgroundColor": [0.968627, 0.960784, 0.937255], "colorA": [0.941176, 0.933333, 0.913725], "colorB": [0.968627, 0.960784, 0.937255]},
+      "description": "The reproducible 31-degree curtain retains its direction but uses only the fixed low-contrast pair #f0eee9 and #f7f5ef."
+    },
+    {
+      "id": "IBP-007",
+      "name": "One-way panel — gentle acceleration",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"oneWay": true, "easingExponent": 1.7, "feather": 0.012, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.941176, 0.933333, 0.913725]},
+      "description": "The panel begins slowly and accelerates through one 11-second crossing using a 1.7-power rhythm. Its two endpoints are exactly #f7f5ef and #f0eee9 before the abrupt light reset."
+    },
+    {
+      "id": "IBP-008",
+      "name": "One-way panel — stronger acceleration",
+      "effect": "sliding_panel_full",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"oneWay": true, "easingExponent": 2.6, "feather": 0.012, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.941176, 0.933333, 0.913725]},
+      "description": "A second rhythm comparison holds the exact palette constant and delays more motion until late in the video with a stronger 2.6-power acceleration before the abrupt light reset."
+    },
+    {
+      "id": "IBP-009",
+      "name": "Soft-edge accelerating door",
+      "effect": "hinged_door_one_way",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 35.0},
+      "parameters": {"easingExponent": 2.4, "featherPixels": 4.0, "backgroundColor": [0.968627, 0.960784, 0.937255], "color": [0.941176, 0.933333, 0.913725]},
+      "description": "The hinged door retains its slow-start, fast-finish opening but softens its edge substantially. Door and background are restricted to #f0eee9 and #f7f5ef."
+    },
+    {
+      "id": "IBP-010",
+      "name": "Irregular static-number wipe",
+      "effect": "flat_number_wipe",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 12, "rows": 30, "minimumSize": 32, "maximumSize": 32, "opacity": 180, "balancedRandomDigits": true, "positionLayout": "random", "numberMotion": "static", "backgroundColor": [0.968627, 0.960784, 0.937255], "numberColor": [0.941176, 0.933333, 0.913725], "panelColor": [0.941176, 0.933333, 0.913725], "wipeEasingExponent": 1.8, "feather": 0.012},
+      "description": "Balanced equal-size digits are scattered deterministically without visible rows or columns and remain still while the right-to-left wipe accelerates. All background graphics use only the fixed subtle palette."
+    },
+    {
+      "id": "IBP-011",
+      "name": "Opposing irregular number wipe",
+      "effect": "flat_number_wipe",
+      "strength": 0.40,
+      "speed": 1.0,
+      "visibilityBoost": 1.30,
+      "loopBehavior": "intentional_hard_reset",
+      "perceptualFloor": {"meanDelta8Bit": 2.0, "p95Delta8Bit": 3.0, "activePixelsAbove3Percent": 45.0},
+      "parameters": {"columns": 12, "rows": 30, "minimumSize": 32, "maximumSize": 32, "opacity": 180, "balancedRandomDigits": true, "positionLayout": "random", "numberMotion": "linear_right", "linearTravel": 0.28, "backgroundColor": [0.968627, 0.960784, 0.937255], "numberColor": [0.941176, 0.933333, 0.913725], "panelColor": [0.941176, 0.933333, 0.913725], "wipeEasingExponent": 1.8, "feather": 0.012},
+      "description": "The irregular equal-size number field moves right as one plane while the accelerating wipe travels from right to left, creating opposing directions without depth or excess contrast."
+    }
+  ]
+}

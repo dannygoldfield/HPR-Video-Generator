@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0",
+  "experimentId": "infinity-background-v10",
+  "workingWidth": 270,
+  "workingHeight": 480,
+  "basePortraitTreatment": {
+    "visualId": "VIS-4DF5D853ACDA-PDE-002",
+    "developmentConfig": "portrait-development-settlement-recipes.json",
+    "developmentRecipeId": "PDE-002"
+  },
+  "principle": "Hold the five-star PDE-002 portrait treatment, subject geometry, light background foundation, duration, and delivery format constant. Change only the layer behind the isolated Infinity subject.",
+  "recipes": [
+    {
+      "id": "INF-001",
+      "name": "Momentum wake",
+      "effect": "momentum_wake",
+      "strength": 0.075,
+      "speed": 0.85,
+      "description": "A broad, warm tonal wake gathers behind the implied direction of the pose without becoming a literal trail."
+    },
+    {
+      "id": "INF-002",
+      "name": "Photographic emulsion bloom",
+      "effect": "emulsion_bloom",
+      "strength": 0.065,
+      "speed": 0.72,
+      "description": "Large, irregular regions of photographic density emerge and recede in the light background."
+    },
+    {
+      "id": "INF-003",
+      "name": "Floating photographic print",
+      "effect": "floating_print",
+      "strength": 0.14,
+      "speed": 0.65,
+      "description": "A soft changing cast shadow makes the isolated figure feel fractionally suspended above the background."
+    },
+    {
+      "id": "INF-004",
+      "name": "Negative-space aperture",
+      "effect": "negative_space_aperture",
+      "strength": 0.055,
+      "speed": 0.68,
+      "description": "The empty space subtly opens around the face and gesture while the outer background gains density."
+    },
+    {
+      "id": "INF-005",
+      "name": "Residual gesture",
+      "effect": "residual_gesture",
+      "strength": 0.075,
+      "speed": 0.78,
+      "description": "Faint, displaced impressions suggest that the background remembers another instant in the gesture."
+    },
+    {
+      "id": "INF-006",
+      "name": "Incomplete geometry",
+      "effect": "incomplete_geometry",
+      "strength": 0.105,
+      "speed": 0.90,
+      "description": "Sparse arcs, points, and relationships appear without resolving into an explanatory diagram."
+    },
+    {
+      "id": "INF-007",
+      "name": "Borrowed-color field",
+      "effect": "borrowed_color_field",
+      "strength": 0.095,
+      "speed": 0.70,
+      "description": "Large atmospheric fields borrow restrained skin and clothing colors from the person."
+    }
+  ]
+}

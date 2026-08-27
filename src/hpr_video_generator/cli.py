@@ -3,11 +3,12 @@ from pathlib import Path
 
 from .config import load_config
 from .generator import Candidate, generate, generate_texture_test
+from .rhythm import RhythmCandidate, generate_rhythm_candidate, load_rhythm_config
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate silent, loop-safe HPR portrait videos")
-    parser.add_argument("command", choices=["generate", "texture-test"])
+    parser.add_argument("command", choices=["generate", "texture-test", "rhythm-generate"])
     parser.add_argument("--portrait", required=True, type=Path)
     parser.add_argument("--grain", type=Path, default=Path("media/source/grain/filmgrain.mov"))
     parser.add_argument("--preset", default="VP-002")
@@ -19,8 +20,35 @@ def main() -> None:
     parser.add_argument("--texture-speed", type=float, default=1.0)
     parser.add_argument("--texture-rotation", type=float, default=0.0)
     parser.add_argument("--config", type=Path, default=Path("config/generator.xml"))
+    parser.add_argument(
+        "--rhythm-config",
+        type=Path,
+        default=Path("config/motion-rhythms.json"),
+    )
+    parser.add_argument("--recipe", default="MR-001")
+    parser.add_argument("--portrait-id")
+    parser.add_argument("--revision-id")
     args = parser.parse_args()
     config = load_config(args.config)
+    if args.command == "rhythm-generate":
+        if not args.portrait_id or not args.revision_id:
+            parser.error("rhythm-generate requires --portrait-id and --revision-id")
+        rhythm_config = load_rhythm_config(args.rhythm_config)
+        recipe = rhythm_config.recipes[args.recipe]
+        output = args.output or Path("media/output/candidates") / (
+            f"{args.portrait_id}_{recipe.id}_seed-{args.seed}.mp4"
+        )
+        candidate = RhythmCandidate(
+            args.portrait_id,
+            args.revision_id,
+            args.portrait,
+            recipe,
+            args.seed,
+            args.duration,
+            output,
+        )
+        print(generate_rhythm_candidate(config, rhythm_config, candidate))
+        return
     preset = config.presets[args.preset]
     output = args.output or Path("media/output/candidates") / f"{args.portrait.stem}_{preset.id}_seed-{args.seed}.mp4"
     candidate = Candidate(args.portrait, args.grain, preset, args.seed, args.duration, output)

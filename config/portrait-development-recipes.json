@@ -1,0 +1,94 @@
+{
+  "version": "0.1.0",
+  "experimentId": "portrait-development-pilot-v5",
+  "mask": {
+    "width": 135,
+    "height": 240,
+    "backgroundInfluence": 0.24,
+    "focalRadiusX": 0.62,
+    "focalRadiusY": 0.58
+  },
+  "surrogate": {
+    "model": "finished-source-one-direction",
+    "temperatureRedGain": 0.965,
+    "temperatureGreenGain": 1.01,
+    "temperatureBlueGain": 1.04,
+    "blackLift": 0.018,
+    "shadowSuppression": 0.105,
+    "shadowCenter": 0.25,
+    "shadowWidth": 0.17,
+    "highlightVeil": 0.09,
+    "highlightCenter": 0.79,
+    "highlightWidth": 0.17,
+    "textureSoftening": 0.24,
+    "textureBlurRadiusAt1080": 1.45,
+    "principle": "The surrogate only withholds information present in the finished source; the animation reveals the untouched finished portrait and never overshoots it."
+  },
+  "recipes": [
+    {
+      "id": "PDA-001",
+      "name": "Finished portrait reference",
+      "mode": "static_reference",
+      "baseFinalMix": 1.0,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.0,
+      "neighborCoupling": 0.0,
+      "speed": 0.0,
+      "direction": [0.0, 0.0]
+    },
+    {
+      "id": "PDA-002",
+      "name": "Global development control",
+      "mode": "global_development",
+      "baseFinalMix": 0.52,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.0,
+      "neighborCoupling": 0.0,
+      "speed": 1.0,
+      "direction": [0.0, 0.0]
+    },
+    {
+      "id": "PDA-003",
+      "name": "Broad sparse activation field",
+      "mode": "activation_field",
+      "baseFinalMix": 0.70,
+      "patchCount": 3,
+      "patchSizeMin": 0.18,
+      "patchSizeMax": 0.31,
+      "feather": 0.72,
+      "neighborCoupling": 0.74,
+      "speed": 1.0,
+      "direction": [0.0, 0.0]
+    },
+    {
+      "id": "PDA-004",
+      "name": "Overlapping surface swells",
+      "mode": "activation_field",
+      "baseFinalMix": 0.63,
+      "patchCount": 5,
+      "patchSizeMin": 0.22,
+      "patchSizeMax": 0.38,
+      "feather": 0.86,
+      "neighborCoupling": 0.84,
+      "speed": 1.0,
+      "direction": [0.0, 0.0]
+    },
+    {
+      "id": "PDA-005",
+      "name": "Extremely soft diagonal sweep",
+      "mode": "soft_sweep",
+      "baseFinalMix": 0.66,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.92,
+      "neighborCoupling": 0.0,
+      "speed": 1.0,
+      "direction": [0.72, 0.28]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": "0.5.0",
+  "experimentId": "film-grain-decision-v24",
+  "purpose": "Make a decisive keep-or-drop choice by comparing four scanned-film sources across moderate, clear, and bold calm-swim treatments. The round begins from the requested 67% mix and 1.25x texture size, compensates each plate for its native contrast, deliberately moves above the too-faint prior round, and removes the smoothing warm-up flash found in FGS-007.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — locked Development Animation and fixed camera"
+    }
+  ],
+  "plates": {
+    "35mm-light": {
+      "filename": "Filmgrain_4KDCI_35mm_24fps.mov",
+      "filmFormat": "35mm",
+      "sourceStrength": "Light"
+    },
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    },
+    "16mm-light": {
+      "filename": "Filmgrain_4KDCI_16mm_24fps.mov",
+      "filmFormat": "16mm",
+      "sourceStrength": "Light"
+    },
+    "super35-heavy": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps_Heavy.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Heavy"
+    }
+  },
+  "recipes": [
+    {"id":"FGD-001","name":"No-grain control","plate":null,"opacity":0.0,"signalGain":1.0,"signalPivot":126.1,"textureScale":1.0,"temporalSmoothFrames":1,"loopCrossfadeFrames":0},
+    {"id":"FGD-002","name":"Super 35 Light — moderate gentle swim","plate":"super35-light","opacity":0.67,"signalGain":2.5,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":3,"loopCrossfadeFrames":24},
+    {"id":"FGD-003","name":"Super 35 Light — clear calm swim","plate":"super35-light","opacity":0.67,"signalGain":4.0,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":5,"loopCrossfadeFrames":24},
+    {"id":"FGD-004","name":"Super 35 Light — bold slowest swim","plate":"super35-light","opacity":0.67,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGD-005","name":"35mm Light — moderate gentle swim","plate":"35mm-light","opacity":0.67,"signalGain":4.3,"signalPivot":125.99,"textureScale":1.25,"temporalSmoothFrames":3,"loopCrossfadeFrames":24},
+    {"id":"FGD-006","name":"35mm Light — clear calm swim","plate":"35mm-light","opacity":0.67,"signalGain":7.0,"signalPivot":125.99,"textureScale":1.25,"temporalSmoothFrames":5,"loopCrossfadeFrames":24},
+    {"id":"FGD-007","name":"35mm Light — bold slowest swim","plate":"35mm-light","opacity":0.86,"signalGain":8.0,"signalPivot":125.99,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGD-008","name":"16mm Light — moderate gentle swim","plate":"16mm-light","opacity":0.67,"signalGain":0.94,"signalPivot":126.16,"textureScale":1.25,"temporalSmoothFrames":3,"loopCrossfadeFrames":24},
+    {"id":"FGD-009","name":"16mm Light — clear calm swim","plate":"16mm-light","opacity":0.67,"signalGain":1.48,"signalPivot":126.16,"textureScale":1.25,"temporalSmoothFrames":5,"loopCrossfadeFrames":24},
+    {"id":"FGD-010","name":"16mm Light — bold slowest swim","plate":"16mm-light","opacity":0.67,"signalGain":2.17,"signalPivot":126.16,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGD-011","name":"Super 35 Heavy — moderate gentle swim","plate":"super35-heavy","opacity":0.67,"signalGain":1.23,"signalPivot":126.17,"textureScale":1.25,"temporalSmoothFrames":3,"loopCrossfadeFrames":24},
+    {"id":"FGD-012","name":"Super 35 Heavy — clear calm swim","plate":"super35-heavy","opacity":0.67,"signalGain":1.96,"signalPivot":126.17,"textureScale":1.25,"temporalSmoothFrames":5,"loopCrossfadeFrames":24},
+    {"id":"FGD-013","name":"Super 35 Heavy — bold slowest swim","plate":"super35-heavy","opacity":0.67,"signalGain":2.82,"signalPivot":126.17,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24}
+  ]
+}

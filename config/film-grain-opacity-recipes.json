@@ -1,0 +1,41 @@
+{
+  "version": "0.6.0",
+  "experimentId": "film-grain-opacity-v25",
+  "sampleSeedNamespace": "film-grain-decision-v24",
+  "purpose": "Find the just-right finishing-layer opacity by holding the exact FGD-004 Super 35 Light scan sample, 1.25x texture scale, 5.9x grain-signal gain, seven-frame calm swim, and seamless loop fixed while opacity alone advances from 10% to 40% in 2.5-point steps.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — locked Development Animation and fixed camera"
+    }
+  ],
+  "plates": {
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    }
+  },
+  "recipes": [
+    {"id":"FGO-001","name":"Super 35 Light — 10% opacity","plate":"super35-light","opacity":0.10,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-002","name":"Super 35 Light — 12.5% opacity","plate":"super35-light","opacity":0.125,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-003","name":"Super 35 Light — 15% opacity","plate":"super35-light","opacity":0.15,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-004","name":"Super 35 Light — 17.5% opacity","plate":"super35-light","opacity":0.175,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-005","name":"Super 35 Light — 20% opacity","plate":"super35-light","opacity":0.20,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-006","name":"Super 35 Light — 22.5% opacity","plate":"super35-light","opacity":0.225,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-007","name":"Super 35 Light — 25% opacity","plate":"super35-light","opacity":0.25,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-008","name":"Super 35 Light — 27.5% opacity","plate":"super35-light","opacity":0.275,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-009","name":"Super 35 Light — 30% opacity","plate":"super35-light","opacity":0.30,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-010","name":"Super 35 Light — 32.5% opacity","plate":"super35-light","opacity":0.325,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-011","name":"Super 35 Light — 35% opacity","plate":"super35-light","opacity":0.35,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-012","name":"Super 35 Light — 37.5% opacity","plate":"super35-light","opacity":0.375,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24},
+    {"id":"FGO-013","name":"Super 35 Light — 40% opacity","plate":"super35-light","opacity":0.40,"signalGain":5.9,"signalPivot":126.10,"textureScale":1.25,"temporalSmoothFrames":7,"loopCrossfadeFrames":24}
+  ]
+}

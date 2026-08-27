@@ -1,0 +1,75 @@
+{
+  "version": "0.2.0",
+  "experimentId": "white-balance-extreme-v4",
+  "valueSystem": {
+    "name": "HPR extreme white-balance delta",
+    "minimum": -100,
+    "maximum": 100,
+    "neutral": 0,
+    "lightroomEquivalent": false,
+    "note": "Intentionally extreme diagnostic values; not Lightroom slider units"
+  },
+  "recipes": [
+    {
+      "id": "WBE-001",
+      "name": "Accurate export reference",
+      "adjustmentType": "reference",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBE-002",
+      "name": "Extreme temperature search",
+      "adjustmentType": "temperature_only",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.22, "temperature": -100.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.48, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.72, "temperature": 100.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBE-003",
+      "name": "Extreme tint search",
+      "adjustmentType": "tint_only",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.22, "temperature": 0.0, "tint": -100.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.48, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.72, "temperature": 0.0, "tint": 100.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBE-004",
+      "name": "Extreme sequential temperature then tint",
+      "adjustmentType": "sequential",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.16, "temperature": -80.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.32, "temperature": 55.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.45, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.58, "temperature": 0.0, "tint": -80.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.74, "temperature": 0.0, "tint": 55.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.88, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    },
+    {
+      "id": "WBE-005",
+      "name": "Extreme coupled white-balance search",
+      "adjustmentType": "coupled",
+      "keyframes": [
+        {"time": 0.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.2, "temperature": -70.0, "tint": 40.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.4, "temperature": 0.0, "tint": -70.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.6, "temperature": 70.0, "tint": -40.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 0.8, "temperature": 0.0, "tint": 70.0, "easingToNext": "ease_in_out_sine"},
+        {"time": 1.0, "temperature": 0.0, "tint": 0.0, "easingToNext": "linear"}
+      ]
+    }
+  ]
+}

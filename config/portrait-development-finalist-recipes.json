@@ -1,0 +1,74 @@
+{
+  "version": "0.3.0",
+  "experimentId": "portrait-development-finalist-v7",
+  "mask": {
+    "width": 135,
+    "height": 240,
+    "backgroundInfluence": 0.24,
+    "focalRadiusX": 0.62,
+    "focalRadiusY": 0.58
+  },
+  "surrogate": {
+    "model": "finished-source-one-direction",
+    "temperatureRedGain": 0.965,
+    "temperatureGreenGain": 1.01,
+    "temperatureBlueGain": 1.04,
+    "blackLift": 0.018,
+    "shadowSuppression": 0.105,
+    "shadowCenter": 0.25,
+    "shadowWidth": 0.17,
+    "highlightVeil": 0.09,
+    "highlightCenter": 0.79,
+    "highlightWidth": 0.17,
+    "textureSoftening": 0.24,
+    "textureBlurRadiusAt1080": 1.45,
+    "principle": "The finished 16-bit TIFF is authoritative. The finalist round keeps the approved source response and changes only field family, finished-rest timing, and reveal strength."
+  },
+  "recipes": [
+    {
+      "id": "PDC-001",
+      "name": "Refined sparse activation — short swing pause",
+      "mode": "activation_field",
+      "baseFinalMix": 0.70,
+      "patchCount": 3,
+      "patchSizeMin": 0.18,
+      "patchSizeMax": 0.31,
+      "feather": 0.76,
+      "neighborCoupling": 0.76,
+      "speed": 0.72,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.128,
+      "easePower": 1.30
+    },
+    {
+      "id": "PDC-002",
+      "name": "Refined soft sweep — short swing pause",
+      "mode": "soft_sweep",
+      "baseFinalMix": 0.70,
+      "patchCount": 0,
+      "patchSizeMin": 0.0,
+      "patchSizeMax": 0.0,
+      "feather": 0.96,
+      "neighborCoupling": 0.0,
+      "speed": 0.85,
+      "direction": [0.72, 0.28],
+      "finishedHold": 0.128,
+      "easePower": 1.40
+    },
+    {
+      "id": "PDC-003",
+      "name": "Assertive sparse activation — boundary test",
+      "mode": "activation_field",
+      "baseFinalMix": 0.50,
+      "patchCount": 4,
+      "patchSizeMin": 0.20,
+      "patchSizeMax": 0.36,
+      "feather": 0.84,
+      "neighborCoupling": 0.82,
+      "speed": 0.80,
+      "direction": [0.0, 0.0],
+      "finishedHold": 0.128,
+      "easePower": 1.25
+    }
+  ]
+}

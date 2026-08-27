@@ -1,0 +1,98 @@
+{
+  "version": "0.4.0",
+  "experimentId": "film-grain-slow-swim-v23",
+  "sampleSeedNamespace": "film-grain-visibility-v22",
+  "purpose": "Refine the FGV-002 visibility level into a calmer slow-swimming grain by increasing correlation across neighboring film frames, then make only modest mix and grain-size increases.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — locked Development Animation and fixed camera"
+    }
+  ],
+  "plates": {
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    }
+  },
+  "recipes": [
+    {
+      "id": "FGS-001",
+      "name": "No-grain composite control",
+      "plate": null,
+      "opacity": 0.0,
+      "signalGain": 1.0,
+      "signalPivot": 126.3,
+      "textureScale": 1.0,
+      "temporalSmoothFrames": 1
+    },
+    {
+      "id": "FGS-002",
+      "name": "FGV-002 reference — native motion",
+      "plate": "super35-light",
+      "opacity": 0.5,
+      "signalGain": 1.0,
+      "signalPivot": 126.3,
+      "textureScale": 1.0,
+      "temporalSmoothFrames": 1
+    },
+    {
+      "id": "FGS-003",
+      "name": "Same grain — gently slowed",
+      "plate": "super35-light",
+      "opacity": 0.5,
+      "signalGain": 1.7,
+      "signalPivot": 126.3,
+      "textureScale": 1.0,
+      "temporalSmoothFrames": 3
+    },
+    {
+      "id": "FGS-004",
+      "name": "Same grain — calmer swim",
+      "plate": "super35-light",
+      "opacity": 0.5,
+      "signalGain": 2.2,
+      "signalPivot": 126.3,
+      "textureScale": 1.0,
+      "temporalSmoothFrames": 5
+    },
+    {
+      "id": "FGS-005",
+      "name": "Calmer swim — 60% mix",
+      "plate": "super35-light",
+      "opacity": 0.6,
+      "signalGain": 2.2,
+      "signalPivot": 126.3,
+      "textureScale": 1.0,
+      "temporalSmoothFrames": 5
+    },
+    {
+      "id": "FGS-006",
+      "name": "Calmer swim — 1.15× grain",
+      "plate": "super35-light",
+      "opacity": 0.6,
+      "signalGain": 2.2,
+      "signalPivot": 126.3,
+      "textureScale": 1.15,
+      "temporalSmoothFrames": 5
+    },
+    {
+      "id": "FGS-007",
+      "name": "Slowest swim — 67% and 1.25×",
+      "plate": "super35-light",
+      "opacity": 0.67,
+      "signalGain": 2.6,
+      "signalPivot": 126.3,
+      "textureScale": 1.25,
+      "temporalSmoothFrames": 7
+    }
+  ]
+}

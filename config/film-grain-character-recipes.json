@@ -1,0 +1,84 @@
+{
+  "version": "0.1.0",
+  "experimentId": "film-grain-character-strength-v19",
+  "purpose": "Choose a scanned-film grain character and an acceptable visibility range without changing the locked portrait animation.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — selected Development Animation control"
+    }
+  ],
+  "plates": {
+    "35mm-light": {
+      "filename": "Filmgrain_4KDCI_35mm_24fps.mov",
+      "filmFormat": "35mm",
+      "sourceStrength": "Light"
+    },
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    },
+    "16mm-light": {
+      "filename": "Filmgrain_4KDCI_16mm_24fps.mov",
+      "filmFormat": "16mm",
+      "sourceStrength": "Light"
+    },
+    "super35-heavy": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps_Heavy.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Heavy"
+    }
+  },
+  "recipes": [
+    {
+      "id": "FGT-001",
+      "name": "No-grain transcode control",
+      "plate": null,
+      "opacity": 0.0
+    },
+    {
+      "id": "FGT-002",
+      "name": "Super 35 Light — subtle",
+      "plate": "super35-light",
+      "opacity": 0.06
+    },
+    {
+      "id": "FGT-003",
+      "name": "35mm Light — medium",
+      "plate": "35mm-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGT-004",
+      "name": "Super 35 Light — medium",
+      "plate": "super35-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGT-005",
+      "name": "16mm Light — medium",
+      "plate": "16mm-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGT-006",
+      "name": "Super 35 Heavy — medium",
+      "plate": "super35-heavy",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGT-007",
+      "name": "Super 35 Light — strong",
+      "plate": "super35-light",
+      "opacity": 0.20
+    }
+  ]
+}

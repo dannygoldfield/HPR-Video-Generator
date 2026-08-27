@@ -1,0 +1,92 @@
+{
+  "version": "0.2.0",
+  "experimentId": "film-grain-composite-v21",
+  "purpose": "Compare scanned-film grain character and strength on all three locked HPR pilot visuals without camera movement: PDE-002 for NYChildren and 10000, and the complete PDE-002 plus IBK-001 Infinity composite.",
+  "source": {
+    "provider": "TDCatTech / LightKino",
+    "downloadPage": "https://tdcat.com/downloads/filmgrain",
+    "permissionText": "free to download and use as you wish",
+    "permissionObservedDate": "2026-08-20",
+    "licenseHandling": "Keep source plates local; publish only rendered works with substantial portrait, animation, and audio content."
+  },
+  "baseVisuals": [
+    {
+      "visualId": "VIS-30FE48FB73CE-PDE-002",
+      "label": "NYChildren — locked Development Animation"
+    },
+    {
+      "visualId": "VIS-90500D66EBBF-PDE-002",
+      "label": "10000 — locked Development Animation"
+    },
+    {
+      "visualId": "VIS-4DF5D853ACDA-IBK-001",
+      "label": "Infinity — locked Development Animation and moving-number background"
+    }
+  ],
+  "plates": {
+    "35mm-light": {
+      "filename": "Filmgrain_4KDCI_35mm_24fps.mov",
+      "filmFormat": "35mm",
+      "sourceStrength": "Light"
+    },
+    "super35-light": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Light"
+    },
+    "16mm-light": {
+      "filename": "Filmgrain_4KDCI_16mm_24fps.mov",
+      "filmFormat": "16mm",
+      "sourceStrength": "Light"
+    },
+    "super35-heavy": {
+      "filename": "Filmgrain_4KDCI_Super_35mm_24fps_Heavy.mov",
+      "filmFormat": "Super 35",
+      "sourceStrength": "Heavy"
+    }
+  },
+  "recipes": [
+    {
+      "id": "FGC-001",
+      "name": "No-grain composite control",
+      "plate": null,
+      "opacity": 0.0
+    },
+    {
+      "id": "FGC-002",
+      "name": "Super 35 Light — subtle",
+      "plate": "super35-light",
+      "opacity": 0.06
+    },
+    {
+      "id": "FGC-003",
+      "name": "35mm Light — medium",
+      "plate": "35mm-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGC-004",
+      "name": "Super 35 Light — medium",
+      "plate": "super35-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGC-005",
+      "name": "16mm Light — medium",
+      "plate": "16mm-light",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGC-006",
+      "name": "Super 35 Heavy — medium",
+      "plate": "super35-heavy",
+      "opacity": 0.12
+    },
+    {
+      "id": "FGC-007",
+      "name": "Super 35 Light — strong",
+      "plate": "super35-light",
+      "opacity": 0.20
+    }
+  ]
+}

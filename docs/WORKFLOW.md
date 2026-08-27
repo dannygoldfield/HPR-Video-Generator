@@ -1,16 +1,29 @@
 # Workflow
 
-1. Export and curate portrait sources outside the repository.
-2. Register or place local copies under `media/source/portraits/`.
-3. Generate silent candidates from versioned presets and deterministic seeds.
-4. Verify dimensions, duration, codec, and loop closure.
-5. Admit usable candidates to the future pairing pool.
-6. After a video/audio pairing is approved, the pairing system retires both assets.
+1. Supply the finished Lightroom export for a Registry portrait revision.
+   Current JPEGs are valid for the pilot; prefer 16-bit TIFF for future work.
+2. Normalize orientation, record source checksums, and create the aligned
+   deterministic under-resolved surrogate.
+3. Generate silent candidates from versioned surface recipes and deterministic
+   spatial and temporal seeds.
+4. Verify fixed geometry, one-direction limits, dimensions, duration, codec, temporal stability, and
+   loop closure.
+5. Review human presence, skin accuracy, tactile realism, organic emergence,
+   effect invisibility, and loop continuity independently.
+6. Admit usable candidates to the future pairing pool.
+7. After a video/audio pairing is approved, the pairing system retires both assets.
 
 ## Calibration rule
 
-Animation, grain, and overall quality are rated separately from 1 to 5. A low animation or grain score means the treatment is too noticeable. Existing preset IDs remain reproducible; calibration creates new preset IDs rather than silently changing old ones.
+Human presence, skin accuracy, tactile realism, organic emergence, effect
+invisibility, loop continuity, and overall quality are rated separately.
+Film grain was evaluated separately and rejected as a production layer on
+2026-08-21. Existing research recipe IDs remain reproducible; calibration
+creates new recipe IDs rather than silently changing old ones.
 
-## Organic texture experiments
+## Historical organic texture experiments
 
 Moving environmental footage can provide motion without geometrically animating the portrait. The first treatment removes stationary scenery through frame differencing, converts the remaining movement to a soft monochrome texture, creates a forward-reverse loop, and blends it over a still portrait at low opacity. Speed and rotation are recorded parameters for later variation.
+
+This and the camera-motion experiments remain research history. The active plan
+is [Portrait Development Animation](PORTRAIT-DEVELOPMENT-ANIMATION.md).
